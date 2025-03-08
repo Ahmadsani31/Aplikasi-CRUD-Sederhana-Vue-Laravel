@@ -84,6 +84,9 @@ Before you start, ensure you have the following installed:
    npm run build
    ```
 
+   ### Note!
+   You can change the rest api URL in src/config/index.ts
+
 ## Page
 
 ### Page login
