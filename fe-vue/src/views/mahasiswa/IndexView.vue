@@ -189,20 +189,33 @@ const fetchMahasiswa = async (page = 1) => {
 }
 
 const deleteMahasiswa = async (id: number) => {
-  placeholder.value = false
-  if (!confirm('Apakah Anda yakin ingin menghapus data ini?')) return
-  try {
+  const result = await Swal.fire({
+    title: "Yakin ingin menghapus?",
+    text: "Data mahasiswa ini akan dihapus secara permanen!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "#3085d6",
+    confirmButtonText: "Ya, hapus!",
+    cancelButtonText: "Batal"
+  });
+
+  if (result.isConfirmed) {
+    placeholder.value = false
+    try {
     const token = localStorage.getItem('auth_token')
     await axios.delete(`${API_URL}/mahasiswa/delete/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
-    fetchMahasiswa(pagination.value.current_page)
-  } catch (error) {
-    console.error('Error deleting mahasiswa:', error)
-  } finally {
-    placeholder.value = true
+
+      Swal.fire("Terhapus!", "Data mahasiswa telah dihapus.", "success");
+      fetchMahasiswa(); // Refresh data setelah hapus
+    } catch (error) {
+      Swal.fire("Gagal!", "Terjadi kesalahan saat menghapus data.", "error");
+      console.error("Error deleting mahasiswa:", error);
+    }
   }
-}
+};
 
 
 onMounted(() => fetchMahasiswa())
