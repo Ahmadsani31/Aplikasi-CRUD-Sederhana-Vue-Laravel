@@ -46,7 +46,7 @@
 
           <div class="card-body table-border-style">
             <div class="table-responsive">
-              <table class="table text-center">
+              <table class="table table-hover text-center">
                 <thead>
                   <tr>
                     <th>No</th>
@@ -60,7 +60,7 @@
                 </thead>
                 <tbody>
                   <template v-if="placeholder">
-                    <template v-if="mahasiswa.length >0">
+                    <template v-if="mahasiswa.length > 0">
                       <tr v-for="(m, index) in mahasiswa" :key="m.id">
                       <td>{{ (pagination.current_page - 1) * perPage + index + 1 }}</td>
                       <td>{{ m.nim }}</td>
@@ -81,7 +81,7 @@
                     </tr>
                     </template>
                 <template v-else>
-                  <td colspan="6"><i>Data empty</i></td>
+                  <td colspan="7"><i>Data not found or empty</i></td>
                 </template>
                   </template>
                   <template v-else>
