@@ -124,6 +124,7 @@
 </template>
 <script setup lang="ts">
 import { Bootstrap5Pagination } from 'laravel-vue-pagination'
+import Swal from 'sweetalert2';
 import { ref, onMounted } from 'vue'
 import API_URL from '@/config'
 
@@ -170,7 +171,7 @@ const fetchMahasiswa = async (page = 1) => {
       headers: { Authorization: `Bearer ${token}` },
       params: { page, search: searchQuery.value },
     })
-    console.log(response.data.data)
+    // console.log(response.data.data)
     dataMahasiswa.value = response.data.data
     mahasiswa.value = response.data.data.data
     pagination.value = {
@@ -202,6 +203,7 @@ const deleteMahasiswa = async (id: number) => {
     placeholder.value = true
   }
 }
+
 
 onMounted(() => fetchMahasiswa())
 

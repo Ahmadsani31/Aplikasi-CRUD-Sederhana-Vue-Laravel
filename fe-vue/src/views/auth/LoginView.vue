@@ -17,7 +17,7 @@ const handleLogin = async () => {
   errorMessage.value = '' // Reset error sebelum login
   try {
     const response = await authStore.login(email.value, password.value)
-    console.log(response)
+    // console.log(response)
     if (response.status === false) {
       errorMessage.value = response.data.error
     } else {

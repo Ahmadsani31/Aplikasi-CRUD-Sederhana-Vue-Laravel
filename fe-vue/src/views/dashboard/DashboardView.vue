@@ -73,7 +73,7 @@ const fetchMahasiswa = async () => {
     const response = await axios.get(`${API_URL}/mahasiswa/total`, {
       headers: { Authorization: `Bearer ${token}` },
     })
-    console.log(response.data.data)
+    // console.log(response.data.data)
     countMahasiswa.value = response.data.data
   } catch (error) {
     console.error('Error fetching mahasiswa:', error)

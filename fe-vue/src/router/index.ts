@@ -8,7 +8,7 @@ import mahasiswaRoutes from './mahasiswaRoutes'
 const routes: Array<RouteRecordRaw> = [...authRoutes, ...dashboardRoutes, ...mahasiswaRoutes]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes,
 })
 
