@@ -60,7 +60,8 @@
                 </thead>
                 <tbody>
                   <template v-if="placeholder">
-                    <tr v-for="(m, index) in mahasiswa" :key="m.id">
+                    <template v-if="mahasiswa.length >0">
+                      <tr v-for="(m, index) in mahasiswa" :key="m.id">
                       <td>{{ (pagination.current_page - 1) * perPage + index + 1 }}</td>
                       <td>{{ m.nim }}</td>
                       <td>{{ m.nama }}</td>
@@ -78,6 +79,10 @@
                         </button>
                       </td>
                     </tr>
+                    </template>
+                <template v-else>
+                  <td colspan="6"><i>Data empty</i></td>
+                </template>
                   </template>
                   <template v-else>
                     <td colspan="7">
