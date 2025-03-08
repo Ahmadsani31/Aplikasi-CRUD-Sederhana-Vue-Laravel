@@ -89,6 +89,12 @@ Before you start, ensure you have the following installed:
 ## Page
 ### Page login
 
-![Login](fe-vue/public/assets/images/github/login.png)
+![Login](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/login.png)
 ### Page Register
-![Register](fe-vue/public/assets/images/github/register.png)
+![Register](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/register.png)
+### Page Dashboard
+![Register](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/dashboard.png)
+### Page Mahasiswa
+![Register](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/mahasiswa.png)
+### Page Mahasiswa ADD
+![Register](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/mahasiswa-tambah.png)
