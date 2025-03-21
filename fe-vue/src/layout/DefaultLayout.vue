@@ -23,6 +23,8 @@ import AppSidebar from '@/components/AppSidebar.vue'
 const pcSidebar = ref<boolean>(false)
 const pcSidebarMobile = ref<boolean>(false)
 
+console.log(pcSidebar)
+
 provide('pcSidebar', pcSidebar)
 provide('pcSidebarMobile', pcSidebarMobile)
 

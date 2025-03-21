@@ -61,7 +61,7 @@ onMounted(() => {
                   v-model="email"
                   class="form-control"
                   placeholder="Email Address"
-                  autocomplete="username"
+                  autocomplete="new-password"
                 />
               </div>
               <div class="form-group mb-3">
@@ -71,7 +71,7 @@ onMounted(() => {
                   class="form-control"
                   v-model="password"
                   placeholder="Password"
-                  autocomplete="current-password"
+                  autocomplete="new-password"
                 />
               </div>
               <div class="d-grid mt-4">

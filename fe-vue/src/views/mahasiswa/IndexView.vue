@@ -31,14 +31,14 @@
             <RouterLink to="/mahasiswa/create" class="btn btn-primary">Tambah Data</RouterLink>
           </div>
           <div class="mx-4 mt-2">
-            <div class="input-group mb-3">
+            <div class="input-group">
               <input
                 type="search"
                 v-model="searchQuery"
-                class="form-control"
+                class="form-control form-control-sm"
                 placeholder="Cari Data..."
               />
-              <button class="btn btn-info input-group-text" @click="fetchMahasiswa(1)">
+              <button class="btn btn-info btn-sm input-group-text" @click="fetchMahasiswa(1)">
                 Filter
               </button>
             </div>
@@ -46,7 +46,7 @@
 
           <div class="card-body table-border-style">
             <div class="table-responsive">
-              <table class="table text-center">
+              <table class="table table-striped text-center">
                 <thead>
                   <tr>
                     <th>No</th>
@@ -70,10 +70,10 @@
                       <td>
                         <RouterLink
                           :to="{ name: 'mahasiswa-edit', params: { id: m.id } }"
-                          class="btn btn-warning btn-sm m-1"
+                          class="btn btn-sm m-1"
                           ><i class="fas fa-edit"></i
                         ></RouterLink>
-                        <button @click="deleteMahasiswa(m.id)" class="btn btn-danger btn-sm m-1">
+                        <button @click="deleteMahasiswa(m.id)" class="btn btn-sm m-1">
                           <i class="fas fa-trash"></i>
                         </button>
                       </td>

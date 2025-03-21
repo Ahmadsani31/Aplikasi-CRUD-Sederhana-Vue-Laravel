@@ -24,7 +24,7 @@ export const useAuthStore = defineStore('auth', {
           email,
           password,
         })
-        console.log(response.data.data.token)
+        // console.log(response.data.data.token)
 
         if (response.data.status === true) {
           // this.user = { token: response.data.data.token }
@@ -76,7 +76,7 @@ export const useAuthStore = defineStore('auth', {
         const response = await axios.get(`${API_URL}/user`, {
           headers: { Authorization: `Bearer ${token}` },
         })
-        console.log(response.data.data)
+        // console.log(response.data.data)
 
         if (response.data.status === true) {
           this.user = {

@@ -97,9 +97,13 @@
                     <h6 class="mb-1">{{ authStore.user?.name }}</h6>
                     <span>{{ authStore.user?.email }}</span>
                   </div>
-                  <a href="#!" @click="handleLogout" class="pc-head-link bg-transparent"
-                    ><i class="ti ti-power text-danger"></i
-                  ></a>
+                  <button
+                    type="button"
+                    @click="handleLogout"
+                    class="pc-head-link bg-transparent btn"
+                  >
+                    <i class="ti ti-power text-danger"></i>
+                  </button>
                 </div>
               </div>
               <div
@@ -109,10 +113,10 @@
                 aria-labelledby="drp-t1"
                 tabindex="0"
               >
-                <a href="#!" @click="handleLogout" class="dropdown-item">
+                <button type="button" @click="handleLogout" class="dropdown-item">
                   <i class="ti ti-power"></i>
                   <span>Logout</span>
-                </a>
+                </button>
               </div>
             </div>
           </li>
@@ -131,6 +135,7 @@ const router = useRouter()
 const toggleSidebar = inject<() => void>('toggleSidebar')
 
 const toggleSidebarMobile = inject<() => void>('toggleSidebarMobile')
+
 // Refs untuk mengakses elemen HTML
 // const sidebar = ref<HTMLElement | null>(null)
 // const sidebarHide = ref<HTMLElement | null>(null)

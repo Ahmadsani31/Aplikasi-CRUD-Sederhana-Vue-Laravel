@@ -93,8 +93,8 @@ Before you start, ensure you have the following installed:
 ### Page Register
 ![Register](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/register.png)
 ### Page Dashboard
-![Register](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/dashboard.png)
+![Dashboard](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/dashboard.png)
 ### Page Mahasiswa
-![Register](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/mhsw.png)
+![Mahasiswa](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/mhsw.png)
 ### Page Mahasiswa ADD
-![Register](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/mhsw-add.png)
+![Mahasiswa-Add](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/mhsw-add.png)
