@@ -5,6 +5,8 @@ import { ref } from 'vue'
 import { useAuthStore } from '@/stores/auth'
 import { useRouter } from 'vue-router'
 
+const errors = ref({})
+
 const email = ref('')
 const password = ref('')
 const isLoading = ref(false)

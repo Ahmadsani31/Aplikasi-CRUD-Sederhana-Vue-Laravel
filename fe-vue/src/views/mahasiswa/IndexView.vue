@@ -46,11 +46,7 @@
 
           <div class="card-body table-border-style">
             <div class="table-responsive">
-<<<<<<< HEAD
               <table class="table table-striped text-center">
-=======
-              <table class="table table-hover text-center">
->>>>>>> 3c1a59352bd2c61cb04d71078b212ca211762f81
                 <thead>
                   <tr>
                     <th>No</th>
@@ -128,7 +124,6 @@
 </template>
 <script setup lang="ts">
 import { Bootstrap5Pagination } from 'laravel-vue-pagination'
-import Swal from 'sweetalert2';
 import { ref, onMounted } from 'vue'
 import API_URL from '@/config'
 
