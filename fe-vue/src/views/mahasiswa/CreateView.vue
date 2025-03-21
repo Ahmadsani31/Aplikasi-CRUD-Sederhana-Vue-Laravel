@@ -98,7 +98,7 @@ const addMahasiswa = async () => {
               <div class="form-group">
                 <label class="form-label" for="nim">NIM</label>
                 <input
-                  type="text"
+                  type="number"
                   class="form-control"
                   :class="{ 'is-invalid': errors.nim?.length > 0 }"
                   v-model="form.nim"
@@ -140,7 +140,7 @@ const addMahasiswa = async () => {
               <div class="form-group">
                 <label class="form-label" for="handphone">No Handphone</label>
                 <input
-                  type="text"
+                  type="number"
                   class="form-control"
                   :class="{ 'is-invalid': errors.no_handphone?.length > 0 }"
                   v-model="form.no_handphone"

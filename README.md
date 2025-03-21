@@ -21,16 +21,18 @@ Before you start, ensure you have the following installed:
    ```bash
    git clone https://github.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel.git
    ```
+
    ## Setup BE-Laravel
 
-    ```bash
+   ```bash
    cd be-laravel
    ```
-      ```bash
+
+   ```bash
    composer update
    composer install
    ```
-   
+
    ```bash
    cp .env.example .env
    ```
@@ -38,7 +40,6 @@ Before you start, ensure you have the following installed:
    ```bash
    php artisan key:generate
    ```
-
 
    change your_database_name, your_database_user, your_database_password with what you have.
 
@@ -65,36 +66,53 @@ Before you start, ensure you have the following installed:
    php artisan serve
    ```
 
-    ## Setup FE-Vue JS
+   ## Setup FE-Vue JS
 
    ```bash
    npm install
    ```
- 
 
+   Compile and Hot-Reload for Development
 
-    Compile and Hot-Reload for Development
+   ```sh
+   npm run dev
+   ```
 
-    ```sh
-    npm run dev
-    ```
+   Type-Check, Compile and Minify for Production
 
-    Type-Check, Compile and Minify for Production
+   ```sh
+   npm run build
+   ```
 
-    ```sh
-    npm run build
-    ```
-
+   ### Note!
+   You can change the rest api URL in src/config/index.ts
 
 ## Page
+
 ### Page login
 
-![Login](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/login.png)
+![Login](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/refs/heads/main/fe-vue/public/assets/images/github/login.png)
+
 ### Page Register
-![Register](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/register.png)
+
+![Register](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/refs/heads/main/fe-vue/public/assets/images/github/register.png)
+
 ### Page Dashboard
+<<<<<<< HEAD
 ![Dashboard](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/dashboard.png)
 ### Page Mahasiswa
 ![Mahasiswa](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/mhsw.png)
 ### Page Mahasiswa ADD
 ![Mahasiswa-Add](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/e0f3dcb452bcd7785184aeef7379cb1f136e8bf2/fe-vue/public/assets/images/github/mhsw-add.png)
+=======
+
+![Register](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/refs/heads/main/fe-vue/public/assets/images/github/dashboard.png)
+
+### Page Mahasiswa
+
+![Register](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/refs/heads/main/fe-vue/public/assets/images/github/mhsw.png)
+
+### Page Mahasiswa ADD
+
+![Register](https://raw.githubusercontent.com/Ahmadsani31/Aplikasi-CRUD-Sederhana-Vue-Laravel/refs/heads/main/fe-vue/public/assets/images/github/mhsw-add.png)
+>>>>>>> 3c1a59352bd2c61cb04d71078b212ca211762f81

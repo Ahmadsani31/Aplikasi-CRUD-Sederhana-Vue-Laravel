@@ -46,7 +46,11 @@
 
           <div class="card-body table-border-style">
             <div class="table-responsive">
+<<<<<<< HEAD
               <table class="table table-striped text-center">
+=======
+              <table class="table table-hover text-center">
+>>>>>>> 3c1a59352bd2c61cb04d71078b212ca211762f81
                 <thead>
                   <tr>
                     <th>No</th>
@@ -60,7 +64,8 @@
                 </thead>
                 <tbody>
                   <template v-if="placeholder">
-                    <tr v-for="(m, index) in mahasiswa" :key="m.id">
+                    <template v-if="mahasiswa.length > 0">
+                      <tr v-for="(m, index) in mahasiswa" :key="m.id">
                       <td>{{ (pagination.current_page - 1) * perPage + index + 1 }}</td>
                       <td>{{ m.nim }}</td>
                       <td>{{ m.nama }}</td>
@@ -78,6 +83,10 @@
                         </button>
                       </td>
                     </tr>
+                    </template>
+                <template v-else>
+                  <td colspan="7"><i>Data not found or empty</i></td>
+                </template>
                   </template>
                   <template v-else>
                     <td colspan="7">
@@ -119,6 +128,7 @@
 </template>
 <script setup lang="ts">
 import { Bootstrap5Pagination } from 'laravel-vue-pagination'
+import Swal from 'sweetalert2';
 import { ref, onMounted } from 'vue'
 import API_URL from '@/config'
 
@@ -165,7 +175,7 @@ const fetchMahasiswa = async (page = 1) => {
       headers: { Authorization: `Bearer ${token}` },
       params: { page, search: searchQuery.value },
     })
-    console.log(response.data.data)
+    // console.log(response.data.data)
     dataMahasiswa.value = response.data.data
     mahasiswa.value = response.data.data.data
     pagination.value = {
@@ -183,20 +193,34 @@ const fetchMahasiswa = async (page = 1) => {
 }
 
 const deleteMahasiswa = async (id: number) => {
-  placeholder.value = false
-  if (!confirm('Apakah Anda yakin ingin menghapus data ini?')) return
-  try {
+  const result = await Swal.fire({
+    title: "Yakin ingin menghapus?",
+    text: "Data mahasiswa ini akan dihapus secara permanen!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "#3085d6",
+    confirmButtonText: "Ya, hapus!",
+    cancelButtonText: "Batal"
+  });
+
+  if (result.isConfirmed) {
+    placeholder.value = false
+    try {
     const token = localStorage.getItem('auth_token')
     await axios.delete(`${API_URL}/mahasiswa/delete/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
-    fetchMahasiswa(pagination.value.current_page)
-  } catch (error) {
-    console.error('Error deleting mahasiswa:', error)
-  } finally {
-    placeholder.value = true
+
+      Swal.fire("Terhapus!", "Data mahasiswa telah dihapus.", "success");
+      fetchMahasiswa(); // Refresh data setelah hapus
+    } catch (error) {
+      Swal.fire("Gagal!", "Terjadi kesalahan saat menghapus data.", "error");
+      console.error("Error deleting mahasiswa:", error);
+    }
   }
-}
+};
+
 
 onMounted(() => fetchMahasiswa())
 
